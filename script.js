@@ -1,179 +1,144 @@
-// =======================
-// Liste des niveaux
-// =======================
+// =========================
+// Google Form
+// =========================
+
+const form = "https://forms.gle/LE3S9eEhaBwhakhJ6";
+
+// =========================
+// Liste des fichiers
+// =========================
 
 const niveaux = [
 
-    // ---------- INGENIEUR ----------
+    // -------- Ingénieur --------
 
     {
         name: "1ère Ingénieur",
-        global: "pdf/1ere Ing Globale.pdf",
-        matiere: "pdf/1ere ING Matière.pdf"
+        file: "xlsx/1ere ING.xlsx"
     },
 
     {
         name: "2ème Ingénieur",
-        global: "pdf/2eme ING Globale.pdf",
-        matiere: "pdf/2eme ING Matière.pdf"
+        file: "xlsx/2eme ING.xlsx"
     },
 
     {
         name: "3ème Ingénieur",
-        global: "pdf/3 eme ING Globale.pdf",
-        matiere: "pdf/3 eme ING Matière.pdf"
+        file: "xlsx/3eme ING.xlsx"
     },
 
-    // ---------- LICENCE ----------
+    // -------- ELM Automobile --------
 
     {
-        name: "L1 Automobile",
-        global: "pdf/L1 Automobile Globale.pdf",
-        matiere: "pdf/L1 Automobile Matière.pdf"
+        name: "L1 ELM Automobile",
+        file: "xlsx/L1 ELM Automobile.xlsx"
+    },
+
+       {
+        name: "L2 ELM Automobile",
+        file: "xlsx/L2 ELM Automobile.xlsx"
+    },
+// -------- Licence --------
+    {
+        name: "L2 Automatique",
+        file: "xlsx/L2 Aut.xlsx"
     },
 
  
-
-    {
-        name: "L2 Automobile",
-        global: "pdf/L2 Automobile Globale.pdf",
-        matiere: "pdf/L2 Automobile Matière.pdf"
-    },
-    {
-        name: "L2 Automatique",
-        global: "pdf/L2 Aut Globale.pdf",
-        matiere: "pdf/L2 Aut Matière.pdf"
-    },
     {
         name: "L2 Electromécanique",
-        global: "pdf/L2 ELM Globale.pdf",
-        matiere: "pdf/L2 ELM Matière.pdf"
+        file: "xlsx/L2 ELM.xlsx"
     },
 
     {
         name: "L2 Electrotechnique",
-        global: "pdf/L2 ELT Globale.pdf",
-        matiere: "pdf/L2 ELT Matière.pdf"
+        file: "xlsx/L2 ELT.xlsx"
     },
 
     {
         name: "L3 Automatique",
-        global: "pdf/L3 Aut Globale.pdf",
-        matiere: "pdf/L3 Aut Matière.pdf"
+        file: "xlsx/L3 Aut.xlsx"
     },
 
     {
         name: "L3 Electromécanique",
-        global: "pdf/L3 ELM Globale.pdf",
-        matiere: "pdf/L3 ELM Matière.pdf"
+        file: "xlsx/L3 ELM.xlsx"
     },
 
     {
         name: "L3 Electrotechnique",
-        global: "pdf/L3 ELT Globale.pdf",
-        matiere: "pdf/L3 ELT Matière.pdf"
+        file: "xlsx/L3 ELT.xlsx"
     },
 
-    // ---------- MASTER 1 ----------
+    // -------- Master 1 --------
 
     {
-        name: "M1 Automatique",
-        global: "pdf/M1 Aut Globale.pdf",
-        matiere: "pdf/M1 Aut Matière.pdf"
+        name: "M1 Automatique et Informatique Industrielle",
+        file: "xlsx/M1 Aut.xlsx"
     },
 
     {
-        name: "M1 Commandes",
-        global: "pdf/M1 CMD Globale.pdf",
-        matiere: "pdf/M1 CMD Matière.pdf"
+        name: "M1 Commandes Electrique",
+        file: "xlsx/M1 CMD.xlsx"
     },
 
     {
         name: "M1 Electromécanique",
-        global: "pdf/M1 ELM Globale.pdf",
-        matiere: "pdf/M1 ELM Matière.pdf"
+        file: "xlsx/M1 ELM.xlsx"
     },
 
     {
         name: "M1 Énergies Renouvelables",
-        global: "pdf/M1 ER Globale.pdf",
-        matiere: "pdf/M1 ER Matière.pdf"
+        file: "xlsx/M1 ER.xlsx"
     },
 
-    // ---------- MASTER 2 ----------
+    // -------- Master 2 --------
 
     {
-        name: "M2 Automatique",
-        matiere: "pdf/M2 Aut Matière.pdf"
+        name: "M2 Automatique et Informatique Industrielle",
+        file: "xlsx/M2 Aut.xlsx"
     },
 
     {
-        name: "M2 Commandes",
-        matiere: "pdf/M2 CMD Matière.pdf"
+        name: "M2 Commandes Electrique",
+        file: "xlsx/M2 CMD.xlsx"
     },
 
     {
         name: "M2 Electromécanique",
-        matiere: "pdf/M2 ELM Matière.pdf"
+        file: "xlsx/M2 ELM.xlsx"
     },
 
     {
         name: "M2 Énergies Renouvelables",
-        matiere: "pdf/M2 ER Matière.pdf"
+        file: "xlsx/M2 ER.xlsx"
     }
 
 ];
 
-// =======================
-// Google Form
-// =======================
-
-const form = "https://forms.gle/GPhpdWuBqeCitvBz7";
-
-// =======================
+// =========================
 
 const cards = document.getElementById("cards");
 
-// =======================
-// Création des cartes
-// =======================
+// =========================
 
-function render(list) {
+function render(list){
 
     cards.innerHTML = "";
 
-    list.forEach(n => {
+    list.forEach(item=>{
 
-        let html = `
+        cards.innerHTML += `
         <div class="card">
-            <h3>${n.name}</h3>
-        `;
 
-        if (n.global) {
+            <h3>${item.name}</h3>
 
-            html += `
             <a class="btn global"
-               href="${n.global}"
+               href="${item.file}"
                target="_blank">
-               📄 PV Global
+               📊 Consulter les résultats
             </a>
-            `;
 
-        }
-
-        if (n.matiere) {
-
-            html += `
-            <a class="btn matiere"
-               href="${n.matiere}"
-               target="_blank">
-               📑 PV Matière
-            </a>
-            `;
-
-        }
-
-        html += `
             <a class="btn recours"
                href="${form}"
                target="_blank">
@@ -183,30 +148,28 @@ function render(list) {
         </div>
         `;
 
-        cards.innerHTML += html;
-
     });
 
 }
 
-// =======================
-// Affichage initial
-// =======================
+// =========================
 
 render(niveaux);
 
-// =======================
-// Recherche
-// =======================
+// =========================
 
-document.getElementById("search").addEventListener("input", function () {
+document.getElementById("search").addEventListener("input",function(){
 
-    const txt = this.value.toLowerCase();
+    const txt=this.value.toLowerCase();
 
-    const filtre = niveaux.filter(item =>
-        item.name.toLowerCase().includes(txt)
+    render(
+
+        niveaux.filter(item=>
+
+            item.name.toLowerCase().includes(txt)
+
+        )
+
     );
-
-    render(filtre);
 
 });
