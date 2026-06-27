@@ -8,7 +8,16 @@ const niveaux=[
 {name:"L2 ELM",global:"pdf/L2 ELM Globale.pdf",matiere:"pdf/L2 ELM Matière.pdf"},
 {name:"L2 ELT",global:"pdf/L2 ELT Globale.pdf",matiere:"pdf/L2 ELT Matière.pdf"},
 {name:"L3 AUT",global:"pdf/L3 AUT Globale.pdf",matiere:"pdf/L3 AUT Matière.pdf"},
-{name:"L3 ELM",global:"pdf/L3 ELM Globale.pdf",matiere:"pdf/L3 ELM Matière.pdf"}
+{name:"L3 ELM",global:"pdf/L3 ELM Globale.pdf",matiere:"pdf/L3 ELM Matière.pdf"},
+  {name:"M1 Automatique",global:"pdf/M1 Aut Globale.pdf",matiere:"pdf/M1 Aut Matière.pdf"},
+{name:"M1 Commandes",global:"pdf/M1 CMD Globale.pdf",matiere:"pdf/M1 CMD Matière.pdf"},
+{name:"M1 Electromécanique",global:"pdf/M1 ELM Globale.pdf",matiere:"pdf/M1 ELM Matière.pdf"},
+{name:"M1 Énergies Renouvelables",global:"pdf/M1 ER Globale.pdf",matiere:"pdf/M1 ER Matière.pdf"},
+
+{name:"M2 Automatique",global:"",matiere:"pdf/M2 Aut Matière.pdf"},
+{name:"M2 Commandes",global:"",matiere:"pdf/M2 CMD Matière.pdf"},
+{name:"M2 Electromécanique",global:"",matiere:"pdf/M2 ELM Matière.pdf"},
+{name:"M2 Énergies Renouvelables",global:"",matiere:"pdf/M2 ER Matière.pdf"}
 ];
 const form="https://forms.gle/Ueh21xPwFFQRQyTR9";
 const cards=document.getElementById("cards");
