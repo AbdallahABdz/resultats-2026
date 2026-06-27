@@ -32,18 +32,18 @@ const niveaux = [
         matiere: "pdf/L1 Automobile Matière.pdf"
     },
 
-    {
-        name: "L2 Automatique",
-        global: "pdf/L2 Aut Globale.pdf",
-        matiere: "pdf/L2 Aut Matière.pdf"
-    },
+ 
 
     {
         name: "L2 Automobile",
         global: "pdf/L2 Automobile Globale.pdf",
         matiere: "pdf/L2 Automobile Matière.pdf"
     },
-
+    {
+        name: "L2 Automatique",
+        global: "pdf/L2 Aut Globale.pdf",
+        matiere: "pdf/L2 Aut Matière.pdf"
+    },
     {
         name: "L2 Electromécanique",
         global: "pdf/L2 ELM Globale.pdf",
