@@ -1,0 +1,1 @@
+Place all PDF files inside a folder named 'pdf'. Replace the Google Form URL in script.js.
