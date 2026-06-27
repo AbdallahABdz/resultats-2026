@@ -19,7 +19,7 @@ cards.innerHTML+=`<div class="card">
 <h3>${n.name}</h3>
 <a class="btn global" target="_blank" href="${n.global}">PV Global</a>
 <a class="btn matiere" target="_blank" href="${n.matiere}">PV Matière</a>
-<a class="btn recours" target="_blank" href="${form}?entry.niveau=${encodeURIComponent(n.name)}">Déposer un recours</a>
+<a class="btn recours" target="_blank" href="${form}?entry.niveau=${encodeURIComponent(n.name)}">أرسل طعن </a>
 </div>`;
 });
 }
